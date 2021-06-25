@@ -1,13 +1,5 @@
-import { useEffect } from "react";
-
 const App = () => { 
-  
-  useEffect(() => { 
-    
-  }, [])
-  return (
-    
-  )
+  return null;
 };
 
 export default App;
