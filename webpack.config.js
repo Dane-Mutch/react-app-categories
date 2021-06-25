@@ -2,12 +2,14 @@ const path = require('path');
 
 const babelOptions = {
   "presets": [
-    "@babel/preset-react", "@babel/preset-env"
+    ["@babel/preset-react", { 
+      "runtime": "automatic"
+    }], "@babel/preset-env"
   ]
 };
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: './src/index.tsx',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
@@ -68,7 +70,7 @@ module.exports = {
     test: /\.s(a|c)ss$/,
     exclude: /\.module.(s(a|c)ss)$/,
     use: [
-      MiniCssExtractPlugin.loader,
+      'style-loader',
       'css-loader',
       'postcss-loader',
       {

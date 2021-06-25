@@ -7,7 +7,7 @@ export const categoriesApi = createApi({
   reducerPath: 'categoriesApi',
   baseQuery: fetchBaseQuery({ baseUrl: 'https://developertests.z33.web.core.windows.net/' }),
   endpoints: (builder) => ({
-    getCategories: builder.query<Category, string>({
+    getCategories: builder.query<Category, void>({
       query: () => 'ReactTestData.json',
     }),
   }),
