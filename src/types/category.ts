@@ -6,7 +6,9 @@ interface ProductData {
   price: number,
 }
 
-export interface Category { 
+interface Category { 
   title: string, 
   data: ProductData
 }
+
+export type Categories = Category[]

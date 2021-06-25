@@ -87,6 +87,6 @@ module.exports = {
     hot: true,
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js', '.scss']
   },
 };

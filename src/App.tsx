@@ -1,8 +1,9 @@
 import { useGetCategoriesQuery } from "./services/categoriesApi";
+import Layout from './components/Layout'
 
 const App = () => { 
   const { data, isLoading, error } = useGetCategoriesQuery();
-  return null;
+  return <Layout />
 };
 
 export default App;
