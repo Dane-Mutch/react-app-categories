@@ -1,9 +1,9 @@
 const path = require('path');
 
 const babelOptions = {
-    "presets": [
-      "@babel/preset-react", "@babel/preset-env"
-    ]
+  "presets": [
+    "@babel/preset-react", "@babel/preset-env"
+  ]
 };
 
 module.exports = {
@@ -25,7 +25,8 @@ module.exports = {
           loader: 'ts-loader'
         }
       ]
-    }, {
+    }, 
+    {
       test: /\.js$/,
       exclude: /node_modules/,
       use: [
@@ -34,10 +35,55 @@ module.exports = {
           options: babelOptions
         }
       ]
-    }]
+    },
+    {
+    test: /\.css$/,
+    use: ['style-loader', 'css-loader', 'postcss-loader'],
   },
-  plugins: [
-  ],
+  {
+    test: /\.module\.s(a|c)ss$/,
+    use: [
+      'style-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          modules: {
+            localIdentName: true
+              ? '[name]__[local]'
+              : '[hash:base64:5]',
+          },
+          sourceMap: true,
+        },
+      },
+      'postcss-loader',
+      {
+        loader: 'sass-loader',
+        options: {
+          sourceMap: true,
+        },
+      },
+    ],
+  },
+  {
+    test: /\.s(a|c)ss$/,
+    exclude: /\.module.(s(a|c)ss)$/,
+    use: [
+      MiniCssExtractPlugin.loader,
+      'css-loader',
+      'postcss-loader',
+      {
+        loader: 'sass-loader',
+        options: {
+          sourceMap: true,
+        },
+      },
+    ],
+  }]
+  },
+  devServer: {
+    openPage: 'index.html',
+    hot: true,
+  },
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   },
