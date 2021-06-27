@@ -1,3 +1,5 @@
+export type CategoryTitle = 'Milk' | 'Milkshakes' | 'Fruit Juice' | 'Eggs' | 'Creamery' | 'Christmas' | 'Bakery' | 'Spring Water' | 'Soft Drinks' | 'Veg Boxes'
+
 interface ProductData { 
   amount: string,
   key: number, 
@@ -6,9 +8,9 @@ interface ProductData {
   price: number,
 }
 
-interface Category { 
-  title: string, 
-  data: ProductData
+export interface Category { 
+  title: CategoryTitle, 
+  data: ProductData[]
 }
 
 export type Categories = Category[]

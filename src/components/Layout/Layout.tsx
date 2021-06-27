@@ -1,13 +1,15 @@
-import Header from './Header'
-import Footer from './Footer'
-import Main from './Main'
+import Header from '../Header'
+import Footer from '../Footer'
+import Main from '../Main'
 
-import styles from './layout.module.scss';
+import classes from './layout.module.scss';
+import { useGetCategoriesQuery } from '../../services/categoriesApi';
 
 const Layout = () => { 
   return (
-    <section className={styles.container}>
+    <section className={classes.container}>
       <Header />
+      <div className={classes.image}></div>
       <Main />
       <Footer />
     </section>

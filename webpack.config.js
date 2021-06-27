@@ -80,7 +80,12 @@ module.exports = {
         },
       },
     ],
-  }]
+  },
+  {
+    test: /\.(png|jpg|gif)$/i,
+    type: 'asset/resource'
+  }, 
+]
   },
   devServer: {
     openPage: 'index.html',
