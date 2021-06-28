@@ -10,4 +10,14 @@
   margin: 10px auto;
   background-color: #fdfdfd;
   box-shadow: 0 0 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.selected {
+  background-color: #a6c4ff;
+}
+
+.textSelected {
+  color: #fdfdfd;
 }

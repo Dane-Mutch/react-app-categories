@@ -1,15 +1,12 @@
 import { FC } from 'react';
 import Slider from 'react-slick';
-import { useMediaQuery } from '../../helpers/customHooks';
 
-import type { Category } from '../../types/category'
-import CategoryCard from '../CategoryCard'
-
-import './categoriesSlider.scss';
+import type { Category } from '../../types/category';
+import CategoryCard from '../CategoryCard';
 
 type Props = {
   categories: Category['title'][];
-}
+};
 
 const slickResponsiveOptions = [
   {
@@ -18,8 +15,8 @@ const slickResponsiveOptions = [
       slidesToShow: 4,
       slidesToScroll: 2,
       infinite: true,
-      dots: true
-    }
+      dots: true,
+    },
   },
   {
     breakpoint: 1250,
@@ -27,33 +24,38 @@ const slickResponsiveOptions = [
       slidesToShow: 3,
       slidesToScroll: 2,
       infinite: true,
-      dots: true
-    }
+      dots: true,
+    },
   },
   {
     breakpoint: 1000,
     settings: {
       slidesToShow: 2,
-      slidesToScroll: 2
-    }
+      slidesToScroll: 2,
+    },
   },
   {
     breakpoint: 600,
     settings: {
       slidesToShow: 1,
-      slidesToScroll: 1
-    }
-  }
-]
+      slidesToScroll: 1,
+    },
+  },
+];
 
-const CategoriesSlider: FC<Props> = ({ categories }) => { 
-  return ( 
-    <Slider slidesToShow={5} slidesToScroll={2} responsive={slickResponsiveOptions} infinite>
-      {categories.map(category => ( 
+const CategoriesSlider: FC<Props> = ({ categories }) => {
+  return (
+    <Slider
+      slidesToShow={5}
+      slidesToScroll={2}
+      responsive={slickResponsiveOptions}
+      infinite
+    >
+      {categories.map(category => (
         <CategoryCard category={category} key={category} />
       ))}
     </Slider>
-  )
-}
+  );
+};
 
-export default CategoriesSlider
+export default CategoriesSlider;

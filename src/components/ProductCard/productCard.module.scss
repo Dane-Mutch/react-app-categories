@@ -1,0 +1,18 @@
+.container {
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.productDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text {
+  padding: 5px;
+}

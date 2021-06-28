@@ -1,1 +1,1 @@
-export { default } from './store';
+export { default, AppDispatch, RootState } from './store';

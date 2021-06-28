@@ -3,9 +3,11 @@
   padding: 30px;
   margin: auto;
   background-color: #dae8f0;
+  @media screen and (max-width: 500px) {
+    padding: 10px;
+  }
 }
 
 .sliderContainer {
-  margin: 0 25px;
-  padding: 10px;
+  margin: 0 20px;
 }

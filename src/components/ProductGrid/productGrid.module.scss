@@ -1,0 +1,8 @@
+.container {
+  padding: 50px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  justify-items: stretch;
+  align-items: stretch;
+}
