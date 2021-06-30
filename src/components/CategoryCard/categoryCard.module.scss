@@ -12,6 +12,9 @@
   box-shadow: 0 0 5px;
   cursor: pointer;
   transition: background-color 0.5s ease;
+  @media screen and (max-width: 620px) {
+    width: 90%;
+  }
 }
 
 .selected {

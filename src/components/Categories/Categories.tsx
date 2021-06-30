@@ -8,6 +8,9 @@ import {
 } from '../../store/reducers/appReducer';
 import { useGetCategoriesQuery } from '../../services/categoriesApi';
 
+import classes from './categories.module.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const Categories = () => {
   const dispatch = useAppDispatch();
   const { data } = useGetCategoriesQuery();
@@ -20,10 +23,18 @@ const Categories = () => {
 
   return categories ? (
     <>
-      <Button variant='outline-primary' onClick={handleSelectAllClick}>
+      <Button
+        className={classes.button}
+        variant='outline-primary'
+        onClick={handleSelectAllClick}
+      >
         Select all
       </Button>
-      <Button variant='outline-primary' onClick={handleDeselectAll}>
+      <Button
+        className={classes.button}
+        variant='outline-primary'
+        onClick={handleDeselectAll}
+      >
         Deselect all
       </Button>
       <CategoriesSlider categories={categories} />

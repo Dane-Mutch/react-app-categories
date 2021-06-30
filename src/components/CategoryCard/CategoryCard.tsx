@@ -65,7 +65,7 @@ const CategoryCard: FC<Props> = ({ category }) => {
         height='200'
         width='200'
       ></img>
-      <p>{category}</p>
+      <p style={{ margin: 'auto', padding: '5px' }}>{category}</p>
     </div>
   );
 };
