@@ -1,14 +1,17 @@
 import { FC } from 'react';
-import Slider from 'react-slick';
+import Slider, { ResponsiveObject } from 'react-slick';
 
 import type { Category } from '../../types/category';
 import CategoryCard from '../CategoryCard';
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 type Props = {
   categories: Category['title'][];
 };
 
-const slickResponsiveOptions = [
+const slickResponsiveOptions: ResponsiveObject[] = [
   {
     breakpoint: 1500,
     settings: {
