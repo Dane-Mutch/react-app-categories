@@ -1,21 +1,16 @@
-import { useGetCategoriesQuery } from '../../services/categoriesApi';
-import CategoriesSlider from '../CategoriesSlider';
+import Categories from '../Categories';
 import ProductGrid from '../ProductGrid';
 import classes from './main.module.scss';
 
 const Main = () => {
-  const { data } = useGetCategoriesQuery();
-
-  const categories = data?.map(category => category.title);
-
-  return categories ? (
+  return (
     <div className={classes.container}>
       <div className={classes.sliderContainer}>
-        <CategoriesSlider categories={categories} />
-        <ProductGrid></ProductGrid>
+        <Categories />
       </div>
+      <ProductGrid />
     </div>
-  ) : null;
+  );
 };
 
 export default Main;
