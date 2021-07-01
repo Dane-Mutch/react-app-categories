@@ -1,7 +1,6 @@
 import { precacheAndRoute } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
-import { StaleWhileRevalidate, CacheFirst } from 'workbox-strategies';
-import { CacheableResponsePlugin } from 'workbox-cacheable-response';
+import { StaleWhileRevalidate } from 'workbox-strategies';
 
 interface self extends Window {
   ['__WB_MANIFEST']: any;

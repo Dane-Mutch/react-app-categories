@@ -1,12 +1,3 @@
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-
-import App from './App';
-import store from './store';
-import './serviceWorkerInit.ts';
-
-import './index.scss';
-
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
@@ -19,10 +10,3 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
-
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
-);
