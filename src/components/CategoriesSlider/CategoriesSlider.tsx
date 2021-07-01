@@ -49,16 +49,18 @@ const slickResponsiveOptions: ResponsiveObject[] = [
 
 const CategoriesSlider: FC<Props> = ({ categories }) => {
   return (
-    <Slider
-      slidesToShow={5}
-      slidesToScroll={2}
-      responsive={slickResponsiveOptions}
-      infinite
-    >
-      {categories.map(category => (
-        <CategoryCard category={category} key={category} />
-      ))}
-    </Slider>
+    <>
+      <Slider
+        slidesToShow={5}
+        slidesToScroll={2}
+        responsive={slickResponsiveOptions}
+        infinite
+      >
+        {categories.map(category => (
+          <CategoryCard category={category} key={category} />
+        ))}
+      </Slider>
+    </>
   );
 };
 

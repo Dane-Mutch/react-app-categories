@@ -12,13 +12,12 @@ const ProductGrid = () => {
     ?.filter(category => selectedCategories.includes(category.title))
     .map(category => category.data)
     .flat();
+
   return (
     <section className={classes.container}>
-      {productsToView?.length ? (
-        productsToView?.map(product => <ProductCard data={product} />)
-      ) : (
-        <p>Please select a category</p>
-      )}
+      {productsToView?.map(product => (
+        <ProductCard data={product} key={product.key} />
+      ))}
     </section>
   );
 };
